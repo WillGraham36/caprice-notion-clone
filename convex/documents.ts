@@ -10,6 +10,50 @@ import { Doc, Id } from './_generated/dataModel';
     */
 
 
+export const deleteDocument = mutation({
+    args: {id: v.id("documents")},
+    handler: async (ctx, args) => {
+        const identity = await ctx.auth.getUserIdentity();
+        if(!identity) { //un-registered user is trying to create a document
+            throw new Error("Not authorized");
+        }
+        const userId = identity.subject;
+
+        //Check the user is authorized to delete the document and it exists
+        const existingDocument = await ctx.db.get(args.id);
+        if(!existingDocument) {
+            throw new Error("Document not found");
+        }
+        if(existingDocument.userId !== userId) {
+            throw new Error("Not authorized to archive this document");
+        }
+
+        
+        const recursivelyDelete = async(documentId: Id<"documents">) => {
+            const children = await ctx.db
+            .query("documents")
+            .withIndex("by_user_parent", (q) =>(
+                q
+                .eq("userId", userId)
+                .eq("parentDocument", documentId)
+            ))
+            .collect();
+            
+            for(const child of children) {
+                await recursivelyDelete(child._id);
+                await ctx.db.delete(child._id);
+            }
+        }
+        
+        recursivelyDelete(args.id);
+        const document = await ctx.db.delete(args.id);
+
+        return document;
+    }
+})
+
+
+
 export const archive = mutation({
     args: {id: v.id("documents")},
     handler: async (ctx, args) => {

@@ -16,6 +16,7 @@ import {
     DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { useUser } from "@clerk/clerk-react";
+import React from "react";
 
 interface ItemProps {
     id?: Id<"documents">;
@@ -45,8 +46,22 @@ export const Item = ({
     const ChevronIcon = expanded ? ChevronDown : ChevronRight;
     const create = useMutation(api.documents.create);
     const archive = useMutation(api.documents.archive);
+    const deleteDocument = useMutation(api.documents.deleteDocument);
     const router = useRouter();
     const { user } = useUser();
+
+    const onDeleteDocument = (
+        e: React.MouseEvent<HTMLDivElement, MouseEvent>
+    ) => {
+        e.stopPropagation();
+        if(!id) return;
+        const promise = deleteDocument({ id });
+        toast.promise(promise, {
+            loading: "Deleting...",
+            success: "Note deleted!",
+            error: "Failed to delete note",
+        });
+    }
 
     const onArchive = (
         e: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -146,7 +161,7 @@ export const Item = ({
                             side="right"
                             forceMount
                         >
-                            <DropdownMenuItem onClick={onArchive} className="cursor-pointer">
+                            <DropdownMenuItem onClick={onDeleteDocument} className="cursor-pointer">
                                 <Trash  className="h-5 w-5 mr-2"/>
                                 Delete
                             </DropdownMenuItem>
