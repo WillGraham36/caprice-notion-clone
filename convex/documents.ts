@@ -1,6 +1,7 @@
 import { v } from 'convex/values';
 import { mutation, query } from './_generated/server';
 import { Doc, Id } from './_generated/dataModel';
+import exp from 'constants';
 
 /*
     * This is the Convex backend for the Notion clone. It contains the Convex
@@ -159,5 +160,26 @@ export const create = mutation({
         })
 
         return document;
+    }
+});
+
+
+export const getSearch = query({
+    handler: async(ctx) => {
+        const identity = await ctx.auth.getUserIdentity();
+        if(!identity) { //un-registered user is trying to create a document
+            throw new Error("Not authorized");
+        }
+        const userId = identity.subject;
+        
+        const documents = await ctx.db
+            .query("documents").withIndex("by_user", (q) => (q.eq("userId", userId)))
+            .filter((q) => 
+                q.eq(q.field("isArchived"), false)
+            )
+            .order("desc")
+            .collect();
+
+        return documents;
     }
 });
