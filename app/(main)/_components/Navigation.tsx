@@ -12,6 +12,7 @@ import { Item } from "./Item";
 import { toast } from "sonner";
 import { DocumentList } from "./DocumentList";
 import { useSearch } from "@/hooks/use-search";
+import { useSettings } from "@/hooks/use-settings";
 
 const Navigation = () => {
     const pathname = usePathname();
@@ -25,6 +26,7 @@ const Navigation = () => {
     //Sidebar will be collapsed by default on mobile
     const [isCollapsed, setIsCollapsed] = useState(isMobile);
     const search = useSearch();
+    const settings = useSettings();
 
     useEffect(() => {
         if(isMobile) {
@@ -142,7 +144,7 @@ const Navigation = () => {
                 <Item 
                     label="Settings"
                     icon={Settings}
-                    onClick={() => {}}
+                    onClick={settings.onOpen}
                 />
                 <Item 
                     onClick={handleCreate} 
