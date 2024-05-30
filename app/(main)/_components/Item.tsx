@@ -61,6 +61,8 @@ export const Item = ({
             success: "Note deleted!",
             error: "Failed to delete note",
         });
+
+        router.push("/documents");
     }
 
     const onArchive = (
