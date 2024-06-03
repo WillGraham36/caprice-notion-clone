@@ -32,7 +32,7 @@ const DocumentIdPage = ({
 	}
 
 	if(document === undefined) {
-		return <div>Loading...</div>
+		return <div className="w-full flex items-center text-center">Loading...</div>
 	}
 	if(document == null) {
 		return <div>Not found</div>
@@ -44,8 +44,9 @@ const DocumentIdPage = ({
 	<div className="pb-40">
 		<div className="h-[35vh]"/>
 		<div className="md:mad-w-3xl lg:max-w-4xl mx-auto">
-			<Toolbar initialData={document}/>
+			<Toolbar preview initialData={document}/>
 			<Editor 
+                editable={false}
 				onChange={onChange}
 				initialContent={document.content}
 			/>
