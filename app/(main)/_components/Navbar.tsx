@@ -3,10 +3,11 @@
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useQuery } from "convex/react";
-import { Menu, MenuIcon } from "lucide-react";
+import { Ellipsis, MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import { Title } from "./Title";
 import { Publish } from "./Publish";
+import { NoteOptions } from "./NoteOptions";
 
 interface NavbarProps {
     isCollapsed: boolean;
@@ -42,11 +43,11 @@ export const Navbar = ({
                         className="h-6 w-6 text-muted-foreground"
                     />
                 )}
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full mx-2">
                     <Title initialData={document}/>
                     <div className="flex items-center gap-x-2">
                         <Publish initialData={document}/>
-                        <Menu />
+                        <NoteOptions id={document._id} />
                     </div>
                 </div>
             </nav>

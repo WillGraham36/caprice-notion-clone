@@ -1,11 +1,11 @@
 "use client";
 import "@blocknote/core/fonts/inter.css";
-import { useCreateBlockNote } from "@blocknote/react";
+import { SuggestionMenuController, useCreateBlockNote } from "@blocknote/react";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 
 import { useTheme } from "next-themes";
-import { BlockNoteEditor } from "@blocknote/core";
+import { BlockNoteEditor, BlockNoteSchema, defaultBlockSpecs, filterSuggestionItems, getDefaultSlashMenuItems } from "@blocknote/core";
 
 interface EditorProps {
     onChange: (value: string) => void;
@@ -22,7 +22,6 @@ const Editor = ({
 
     const editor: BlockNoteEditor = useCreateBlockNote({
         initialContent: initialContent ? JSON.parse(initialContent) : undefined,
-        
     });
     editor.onEditorContentChange(() => onChange(JSON.stringify(editor.document, null, 2)));
 

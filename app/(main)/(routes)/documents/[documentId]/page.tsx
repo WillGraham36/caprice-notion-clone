@@ -41,9 +41,8 @@ const DocumentIdPage = ({
 	
 
 	return (
-	<div className="pb-40">
-		<div className="h-[35vh]"/>
-		<div className="md:mad-w-3xl lg:max-w-4xl mx-auto">
+	<div className="pb-40 pt-32">
+		<div className="md:mad-w-4xl lg:max-w-5xl mx-auto">
 			<Toolbar initialData={document}/>
 			<Editor 
 				onChange={onChange}
