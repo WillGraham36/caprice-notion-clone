@@ -23,13 +23,13 @@ const Editor = ({
     const editor: BlockNoteEditor = useCreateBlockNote({
         initialContent: initialContent ? JSON.parse(initialContent) : undefined,
     });
-    editor.onEditorContentChange(() => onChange(JSON.stringify(editor.document, null, 2)));
 
     return (
         <BlockNoteView 
             editor={editor}
             theme={resolvedTheme === "dark" ? "dark" : "light"}
             editable={editable}
+            onChange={() => {onChange(JSON.stringify(editor.document, null, 2))}}
         />
     );
 }

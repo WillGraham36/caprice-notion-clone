@@ -7,7 +7,7 @@ import exp from 'constants';
     * This is the Convex backend for the Notion clone. It contains the Convex
     * queries and mutations that are used in the frontend.
     * 
-    * This REST API is used to create and read documents from the database.
+    * This API is used to create and read documents from the database.
     */
 
 
