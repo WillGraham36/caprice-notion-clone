@@ -6,6 +6,7 @@ import { Id } from "@/convex/_generated/dataModel";
 import { Toolbar } from "@/components/toolbar";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 
@@ -31,8 +32,21 @@ const DocumentIdPage = ({
 		})
 	}
 
+	//documents are loading
 	if(document === undefined) {
-		return <div>Loading...</div>
+		return (
+			<div className="pb-40 pt-28 pl-[19%]">
+				<Skeleton className="w-20 h-20 rounded-full mb-3"/>
+				<Skeleton className="max-w-[30%] h-16 mb-9"/>
+				<Skeleton className="w-52 h-6 mb-3"/>
+				<Skeleton className="w-80 h-6 mb-3"/>
+				<Skeleton className="w-40 h-6 mb-3 ml-10"/>
+				<Skeleton className="w-80 h-6 mb-3 ml-10"/>
+				<Skeleton className="w-[60%] h-6 mb-3"/>
+				<Skeleton className="w-52 h-6 mb-3"/>
+				<Skeleton className="w-20 h-6 mb-3"/>
+			</div>
+		)
 	}
 	if(document == null) {
 		return <div>Not found</div>
