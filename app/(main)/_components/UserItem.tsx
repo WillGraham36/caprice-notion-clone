@@ -31,7 +31,7 @@ const UserItem = () => {
               <AvatarImage src={user?.imageUrl} />
             </Avatar>
             <span className="text-start font-medium line-clamp-1">
-              {user?.fullName}&apos;s Caprice asdfasdfsadsfadfs
+              {user?.fullName}&apos;s Caprice
             </span>
           </div>
           <ChevronsLeftRight className="rotate-90 ml-2 to-muted-foreground h-4 w-4" />
