@@ -40,9 +40,9 @@ Here are the technologies I used in creating this project:
     <img src="public/default-page.png" alt="default page">
     <img src="public/todo-list.png" alt="todo list">
     <img src="public/colors.png" alt="todo list showing off color selector">
-    <h2>The website is fully responsive on mobile </h2>
-    <img src="public/mobile-sidebar.png" alt="mobile sidebar view" width=300 height=600>
-    <img src="public/mobile-todo-list.png" alt="mobile todo list view" width=300 height=600>
+    <h2>Mobile view of the sidebar and notes page</h2>
+    <img src="public/mobile-sidebar.png" alt="mobile sidebar view" width=320 height=858>
+    <img src="public/mobile-todo-list.png" alt="mobile todo list view" width=425 height=858>
 </div>
 
 
