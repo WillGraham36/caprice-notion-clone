@@ -41,7 +41,7 @@ const DocumentIdPage = ({
 	
 
 	return (
-	<div className="pb-40">
+        <div className="pb-40 dark:bg-[#1F1F1F]">
 		<div className="md:mad-w-3xl lg:max-w-4xl mx-auto">
 			<Toolbar preview initialData={document}/>
 			<Editor 
