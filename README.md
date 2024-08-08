@@ -9,35 +9,18 @@
   </p>
 </div>
 
-
-# Caprice - A Notion Clone
-
-A clone of the popular note taking app, Notion
-
-
-## Project Link
-
-You can access this website here: [Caprice Link](https://caprice-note-taking-app.vercel.app/)
-
-
 ## About Caprice
 
 Caprice is a full-stack clone of Notion, including all notable features such as a working user authentification system, block-note editing, similar nested-like structure to storing notes, dark/light mode, and much more. 
 
-I created this project to learn more about how larger, fullstack projects are created, as well as how to see a project to completion. 
+[![Caprice Main Screenshot][main-screenshot]](https://caprice-note-taking-app.vercel.app/preview/j57adsq9adw5br39mtnswsmy0x6xxrkv)
 
-## Technologies:
-The technologies I used in this project include:
-- React
-- Next.js
-- Tailwind 
-- TypeScript 
-- ConvexDB
-- Clerk
+
+
 
 ## Built With
 
-Here are the technologies I used in creating this project
+Here are the technologies I used in creating this project:
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -46,6 +29,30 @@ Here are the technologies I used in creating this project
 * [![Vercel][Vercel]][Vercel-url]
 * ConvexDB
 * Clerk
+
+## Why I Built This Project
+
+## What I learned 
+
+## Image Gallery
+
+<div align="center">
+    <img src="public/default-page.png" alt="default page">
+    <img src="public/todo-list.png" alt="todo list">
+    <img src="public/colors.png" alt="todo list showing off color selector">
+    <h2>The website is fully responsive on mobile </h2>
+    <img src="public/mobile-sidebar.png" alt="mobile sidebar view" width=300 height=600>
+    <img src="public/mobile-todo-list.png" alt="mobile todo list view" width=300 height=600>
+</div>
+
+
+<!-- CONTACT -->
+## Contact
+
+Will Graham - [LinkedIn](https://www.linkedin.com/in/will-graham-4623022a8/) - willgraham367@gmail.com
+
+Project Link: [https://github.com/WillGraham36/caprice-notion-clone](https://github.com/WillGraham36/caprice-notion-clone)
+
 
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
@@ -58,3 +65,4 @@ Here are the technologies I used in creating this project
 [TypeScript-url]: https://www.typescriptlang.org/
 [Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [Vercel-url]: https://vercel.com/
+[main-screenshot]: /public/caprice-main-screenshot.png
