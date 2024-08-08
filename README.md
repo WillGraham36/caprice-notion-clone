@@ -32,7 +32,16 @@ Here are the technologies I used in creating this project:
 
 ## Why I Built This Project
 
+From class notes and homeworks, to my calendar and project ideas, I use Notion to keep track of everything in my day-to-day life.
+
+I created this project not only to test my technical skills, but also to add features to my favorite app that I wanted.
+
 ## What I learned 
+
+One of the hardest features to implement was the main editor component. Originally, the editor was laggy since the backend was updated after every key pressed.
+However, I made significant optimization refactors to make the user experience seamless to overcome this.
+
+I learned a lot about creating full-stack applications, particularly with making API's that connect my front-end to the database. I learned a lot about creating these APIs using proper design and security practices
 
 ## Image Gallery
 
