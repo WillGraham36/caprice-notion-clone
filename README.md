@@ -20,15 +20,13 @@ Caprice is a full-stack clone of Notion, including all notable features such as 
 
 ## Built With
 
-Here are the technologies I used in creating this project:
-
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![TailWindCSS][TailWind]][TailWind-url]
 * [![TypeScript][TypeScript]][TypeScript-url]
 * [![Vercel][Vercel]][Vercel-url]
-* ConvexDB
-* Clerk
+* ![Convex DB][Convex]
+* ![Clerk][Clerk]
 
 ## Why I Built This Project
 
@@ -74,4 +72,6 @@ Project Link: [https://github.com/WillGraham36/caprice-notion-clone](https://git
 [TypeScript-url]: https://www.typescriptlang.org/
 [Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [Vercel-url]: https://vercel.com/
+[Convex]: https://img.shields.io/badge/Convex%20DB-bc2424?style=for-the-badge
+[Clerk]: https://img.shields.io/badge/Clerk-1b54bf?style=for-the-badge
 [main-screenshot]: /public/caprice-main-screenshot.png
