@@ -20,13 +20,17 @@ Caprice is a full-stack clone of Notion, including all notable features such as 
 
 ## Built With
 
+### Frontend
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![TailWindCSS][TailWind]][TailWind-url]
 * [![TypeScript][TypeScript]][TypeScript-url]
-* [![Vercel][Vercel]][Vercel-url]
-* ![Convex DB][Convex]
 * ![Clerk][Clerk]
+
+### Backend
+* [![Next][Next.js]][Next-url]
+* ![Convex DB][Convex]
+* [![Vercel][Vercel]][Vercel-url]
 
 ## Why I Built This Project
 
