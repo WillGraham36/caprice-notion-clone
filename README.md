@@ -9,16 +9,22 @@
   </p>
 </div>
 
-## About Caprice
+## ℹ️ About Caprice
 
 Caprice is a full-stack clone of Notion, including all notable features such as a working user authentification system, block-note editing, similar nested-like structure to storing notes, dark/light mode, and much more. 
 
 [![Caprice Main Screenshot][main-screenshot]](https://caprice-note-taking-app.vercel.app/preview/j57adsq9adw5br39mtnswsmy0x6xxrkv)
 
+## ✨ Features
+- Real-time block-based editor  
+- Nested pages & notes structure  
+- Fully responsive (mobile + desktop) 
+- User authentication with Clerk  
+- Dark/Light mode toggle  
 
 
 
-## Built With
+## 🛠️ Tech Stack
 
 ### Frontend
 * [![Next][Next.js]][Next-url]
@@ -32,20 +38,20 @@ Caprice is a full-stack clone of Notion, including all notable features such as 
 * ![Convex DB][Convex]
 * [![Vercel][Vercel]][Vercel-url]
 
-## Why I Built This Project
+## ⭐ Why I Built This Project
 
 From class notes and homeworks, to my calendar and project ideas, I use Notion to keep track of everything in my day-to-day life.
 
 I created this project not only to test my technical skills, but also to add features to my favorite app that I wanted.
 
-## What I learned 
+## 📖 What I learned 
 
 One of the hardest features to implement was the main editor component. Originally, the editor was laggy since the backend was updated after every key pressed.
 However, I made significant optimization refactors to make the user experience seamless to overcome this.
 
 I learned a lot about creating full-stack applications, particularly with making API's that connect my front-end to the database. I learned a lot about creating these APIs using proper design and security practices
 
-## Image Gallery
+## 🎞️ Image Gallery
 
 <div align="center">
     <img src="public/default-page.png" alt="default page">
@@ -58,7 +64,7 @@ I learned a lot about creating full-stack applications, particularly with making
 
 
 <!-- CONTACT -->
-## Contact
+## 📞 Contact
 
 Will Graham - [LinkedIn](https://www.linkedin.com/in/will-graham-4623022a8/) - willgraham367@gmail.com
 
